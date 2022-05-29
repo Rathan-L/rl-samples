@@ -8,5 +8,4 @@ grains:
       source:
         path: github.com/QualiTorque/samples.git//terraform/eks-rds
       host:
-        cloud-account: aws-demo
-        compute-service: eks-demo
+        name: eks-demo

@@ -13,8 +13,7 @@ grains:
       source:
         path: github.com/QualiTorque/samples.git//terraform/rds
       host:
-        cloud-account: aws-demo
-        compute-service: eks-demo
+        name: eks-demo
       inputs:
         - sandbox_id: '{{ sandboxid | downcase }}'
         - size: small 
@@ -35,8 +34,7 @@ grains:
       source:
         path: github.com/QualiTorque/samples.git//terraform/s3
       host:
-        cloud-account: aws-demo
-        compute-service: eks-demo
+        name: eks-demo
       inputs:
         - region: eu-west-1
         - acl: public-read
@@ -49,8 +47,7 @@ grains:
       source:
         path: https://github.com/QualiTorque/samples.git//helm/robotshop
       host:
-        cloud-account: aws-demo
-        compute-service: eks-demo
+        name: eks-demo
       inputs:
         - hostname: 'robotshop-{{ sandboxid | downcase }}'
         - version: 0.4.3
