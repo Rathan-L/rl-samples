@@ -3,6 +3,7 @@ description: Robotshot microservices application deployed on K8S with Helm and R
 
 outputs:
   WebsiteUrl:
+    kind: link
     value: 'https://portal.qtorque.io/static/demo-quick-links/stans-robot-shop.html'
 
 
