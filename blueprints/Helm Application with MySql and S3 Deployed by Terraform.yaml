@@ -1,4 +1,4 @@
-spec_version: 2-preview
+spec_version: 2
 description: Robotshot microservices application deployed on K8S with Helm and RDS deployed with TF
 
 outputs:
@@ -25,7 +25,7 @@ grains:
         - username: adminuser
         - vpc_id: vpc-02e3bca90b081cd0f
         - region: us-east-1
-      ouputs:
+      outputs:
         - hostname
         - connection_string
 
@@ -40,6 +40,8 @@ grains:
         - region: eu-west-1
         - acl: public-read
         - name: 'robotshop-s3-{{ sandboxid | downcase }}'
+      outputs:
+        - s3_bucket_arn
 
   robotShopMicroservices:
     kind: helm
