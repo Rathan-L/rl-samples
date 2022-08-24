@@ -12,6 +12,12 @@ resource "aws_db_instance" "default" {
   # Password to connect the database instance 
   password             = var.password
   parameter_group_name = var.parameter_group_name
+  # publicly accesible
+  publicly_accessible  = true
 
   skip_final_snapshot = true
+}
+
+output "db_endpoint" {
+  value = aws_db_instance.default.endpoint
 }
